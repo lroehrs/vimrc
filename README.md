@@ -1,5 +1,16 @@
 # vimrc
 
-My customized vimrc, 98% copied from: 
+My customized vimrc, used with:
 
-https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+Basics:
+https://github.com/amix/vimrc
+
+Theme:
+https://github.com/joshdick/onedark.vim
+
+Statusbar:
+https://github.com/vim-airline/vim-airline
+
+Git diff:
+https://github.com/airblade/vim-gitgutter
+
