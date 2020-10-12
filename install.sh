@@ -23,7 +23,8 @@ if [ -d ~/.vim/ ]; then
   read -p "Overwrite? (Y/n)" answer
 
   case "$answer" in
-    Yes|yes|Y|y|"") cp -rf .vim/ ~/.vim/ ;;
+    Yes|yes|Y|y|"") rm -rf ~/.vim/ 
+      cp -rf .vim/ ~/.vim/ ;;
     No|no|N|n|*) echo "Skipped!" ;;
   esac
 
