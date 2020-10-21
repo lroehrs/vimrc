@@ -339,7 +339,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " gitgutter
 " refresh every second
-set updatetime=1000
+set updatetime=100
 
 " show diff in statusbar
 function! GitStatus()
