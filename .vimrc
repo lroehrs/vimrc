@@ -1,5 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"           https://git.nex.zone/lroehrs/vimrc
 "
 " Sections:
 "    -> General
@@ -116,12 +115,14 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
 " Add a bit extra margin to the left
 set foldcolumn=1
 
 " Add Hybrid Line Numbers 
-set number relativenumber
+set number
+
+" Highlight cursor line
+set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -174,7 +175,7 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
