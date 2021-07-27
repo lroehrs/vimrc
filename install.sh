@@ -2,33 +2,37 @@
 
 cd "$(dirname "$0")"
 
-if [ ! -f .vimrc ]; then
-  echo "I suspected a .vimrc :( \nI'm here: ${pwd}"
+if [[ ! -f .vimrc ]]; then
+	echo "I suspected here a .vimrc! \nPWD: ${pwd}"
 fi
 
-if [ -f ~/.vimrc ]; then
-  if [ $( grep -c 'https://git.nex.zone/lroehrs/vimrc' ~/.vimrc ) -ge "1" ]; then
-    echo "Found already a .vimrc from my own repo!"
-    cp -i .vimrc ~/.vimrc
-  else
-    echo"~/.vimrc already exist!"
-    cp -i .vimrc ~/.vimrc
-  fi
+if [[ -f ~/.vimrc ]]; then
+	echo"~/.vimrc already exist!"
+	read -p "Overwrite? (Y/n)" answer
+	case "$answer" in
+		[yY][eE][sS]|[yY]|"")
+			cat .vimrc > ~/.vimrc
+			;;
+		[nN][oO]|[nN]|*)
+			echo "Skipped!"
+			;;
+	esac
 else
-  cat .vimrc > ~/.vimrc
+	cat .vimrc > ~/.vimrc
 fi
 
-if [ -d ~/.vim/ ]; then
-  echo "~/.vim/ already exist!"
-  read -p "Overwrite? (Y/n)" answer
-
-  case "$answer" in
-    Yes|yes|Y|y|"") rm -rf ~/.vim/ 
-      cp -rf .vim/ ~/.vim/ ;;
-    No|no|N|n|*) echo "Skipped!" ;;
-  esac
-
+if [[ -d ~/.vim/ ]]; then
+	echo "~/.vim/ already exist!"
+	read -p "Overwrite? (Y/n)" answer
+	case "$answer" in
+		[yY][eE][sS]|[yY]|"")
+			rm -rf ~/.vim/
+			cp -rf .vim/ ~/.vim/
+			;;
+		[nN][oO]|[nN]|*)
+			echo "Skipped!"
+			;;
+	esac
 else
-  cp -rf .vim/ ~/.vim/
+	cp -rf .vim/ ~/.vim/
 fi
-
