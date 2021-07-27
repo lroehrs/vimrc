@@ -123,6 +123,7 @@ set number
 
 " Highlight cursor line
 set cursorline
+set cursorcolumn
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
