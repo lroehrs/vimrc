@@ -1,5 +1,11 @@
 # vimrc
 
+Install:
+
+```
+git clone https://github.com/lroehrs/vimrc.git && ./vimrc/install.sh && rm -r ./vimrc/
+```
+
 My customized vimrc, used with:
 
 Basics:
