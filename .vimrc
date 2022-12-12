@@ -188,7 +188,7 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-set paste "Insert correctly paste input
+set nopaste "Insert correctly paste input
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
